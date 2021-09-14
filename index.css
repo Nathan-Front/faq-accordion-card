@@ -1,0 +1,137 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1440px;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    font-family: Kumbh Sans, sans-serif;
+    font-size: 0.75em;
+}
+.main--container{
+    margin: 0;
+    padding: 5%;
+    background-image: url(images/illustration-woman-online-desktop.svg),
+                      url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center left -80px, top -235px left -515px;
+    background-size: 50% 60%, cover;
+    background-color: white;
+    border-radius: 20px;
+    width: 50%;
+}
+.main--container::before{
+    content: " ";
+    width: 290px;
+    height: 250px;
+    position: absolute;
+    z-index: 9;
+    margin: 90px 0 0 -157px;
+    background-image: url(images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 60% 70%;
+    background-position: center left;
+}
+section{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+section>h2{
+    margin: 0 0 5% 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul>li{
+    margin: 0;
+    padding: 5% 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    position: relative;
+    width: 95%;
+}
+.dropbtn{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    background: unset;
+    width: 100%;
+    position: relative;
+    font-weight: 400;
+}
+.dropbtn:hover{
+    cursor: pointer;
+}
+.arrow__symbol{
+    position: absolute;
+    right: 5%;
+}
+.hidden__article{
+    display: none;
+    margin: 5% 0 0 0;
+    padding: 0;
+    width: 90%;
+}
+.fonts{
+    color: hsl(240, 6%, 50%);
+}
+.active{
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+}
+.active .arrow__symbol{
+    transform: rotate(180deg);
+}
+@media only screen and (max-width:768px){
+    body{
+        width: auto;
+    }
+    .main--container{
+        margin: 40% 0 40% 0;
+        padding: 0;
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-position: center top;
+        background-size:  265px 115px;
+        width: 90%;
+    }
+    .main--container::before{
+        content: '';
+        width: 56%;
+        height: 30%;
+        margin: -22% 0 0 14%;
+        padding: 0;
+        background-image: url(images/illustration-woman-online-mobile.svg);
+        background-size: contain;
+        background-position: center top;
+    }
+    section{
+        margin: 40% 0 10% 0;
+        width: 100%;
+        float: unset;
+    }
+    section>h2{
+        text-align: center;
+    }
+    ul>li{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .arrow__symbol{
+        right: 0;
+    }
+}
